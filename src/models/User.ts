@@ -5,7 +5,7 @@ export interface Message extends Document{
     createdAt: Date
 }
 
-const MessageSchema : Schema<Message> = new Schema({
+const MessageSchema : Schema<Message> = new Schema({ // This is use for if user sent any message we are storing in database.
     content: {
     type: String,
     required: true,
@@ -28,7 +28,7 @@ export interface User extends Document {
   messages: Message[];
 }
 
-const UserSchema: Schema<User> = new mongoose.Schema({
+const UserSchema: Schema<User> = new mongoose.Schema({ // Here we're store use offical data .
   username: {
     type: String,
     required: [true, 'Username is required'],
